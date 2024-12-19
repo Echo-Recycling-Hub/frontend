@@ -1,0 +1,585 @@
+/* App.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+html, body {
+  height: 100%;
+  overflow: auto; /* 스크롤을 가능하게 설정 */
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+/* 기존 스타일 유지 */
+body {
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* 나머지 스타일 유지 */
+
+/* 나머지 스타일 유지 */
+.center-style {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.common-section {
+  width: 100vw;
+  background: linear-gradient(to bottom, #fff, #f8f9fa);
+  padding: 8em 0;
+  flex-wrap: wrap;
+  text-align: left;
+  flex-direction: row;
+}
+
+#main-con {
+  width: 85%;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* nav style */
+Nav {
+  width: 100vw;
+  --bs-bg-opacity: 0 !important;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  transition: transform 0.4s ease, background-color 0.3s ease;
+  transform: translateY(0);
+  background-color: transparent;
+  z-index: 99;
+}
+Nav.scrolled { background-color: #212529 !important; }
+Nav a { color: #fff !important; }
+.dropdown-menu > a { color: black !important; }
+
+/* intro style */
+.our-intro {
+  position: absolute;
+  top: 45%;
+  left: 20%;
+  color: #fff;
+  text-align: left;
+}
+.our-intro h1 {
+  font-size: 3.5em;
+  animation-delay: 2s;
+  animation: fade-in 2s forwards;
+}
+.our-intro h2, h3 {
+  animation-delay: 1s;
+  animation: fade-in 3s forwards;
+}
+.our-intro p {
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  animation: intro-p 2s forwards;
+  animation-delay: .5s;
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes intro-p {
+  from { transform: translateX(-20px); }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* circle image style */
+.box {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+}
+.back-img {
+  position: relative;
+  width: 100%;
+  height: 810px;
+  background: url("/public/img/ocg-saving-the-ocean-unsplash.jpg") no-repeat center 20%;
+  background-size: cover;
+  mask-image: linear-gradient(to top, transparent, black 20%),
+  linear-gradient(to left, transparent, black 30%),
+  linear-gradient(to right, transparent, black 30%);
+  mask-composite: intersect;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  animation: left-in 1.5s forwards;
+}
+
+@keyframes left-in {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 0.8;
+  }
+}
+
+/* wave style */
+.wave-con, .wave { position: absolute; }
+.wave-con {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -99;
+}
+.wave {
+  top: 80%;
+  left: 75%;
+  width: 170vw;
+  height: 170vw;
+  margin-left: -110vw;
+  margin-top: -165vw;
+  border-radius: 48%;
+  z-index: -1;
+}
+.wave.-one {
+  animation: waveAnimation 18000ms infinite linear;
+  background: linear-gradient(45deg, #3496fe, #178844 50%);
+}
+.wave.-two {
+  animation: waveAnimation 13500ms infinite linear;
+  opacity: 0.1;
+  background: #000;
+}
+.wave.-three {
+  animation: waveAnimation 11000ms infinite linear;
+  opacity: 0.2;
+  background: #ddd;
+}
+@keyframes waveAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#introduce-sec {
+  width: 80%;
+  padding: 5em 0 3em 0;
+  text-align: left;
+}
+.erehub-intro h1 {
+  font-size: 3em;
+  font-weight: 500;
+  line-height: 1.2em;
+}
+.erehub-intro { padding-top: 2em; }
+
+.erehub-img p { line-height: 1.8em; }
+.erehub-img { position: relative; }
+
+#introduce-sec h2 {
+  display: flex;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0.5em 0;
+}
+.erehub-service {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: flex-end;
+  padding-top: 1em;
+}
+.our-service {
+  width: 100%;
+  padding: 0;
+  display: flex;
+  margin-top: 30px;
+  border-radius: 20px;
+}
+.our-service li {
+  width: 100%;
+  position: relative;
+  transition: .3s linear;
+  margin-left: 20px;
+}
+.erehub-btn {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  background: #178844;
+  font-size: 18px;
+  padding: 16px 42px;
+  letter-spacing: 3px;
+  color: #fff;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: .3s linear;
+  font-weight: bold;
+}
+.erehub-btn:hover {
+  background: #fff;
+  color: #178844;
+  border: 2px solid #178844;
+}
+
+.our-service li:first-child { margin-left: 0; }
+#introduce-sec .service-list {
+  height: 250px;
+  margin: 0 10px;
+  text-align: center;
+}
+.service-list svg {
+  font-size: 5em;
+  opacity: 70%;
+  color: #178844;
+}
+.service-list .service-list-info { margin-top: 10px; }
+.service-list-info h4 {
+  color: #444;
+  font-weight: bold;
+}
+#intro-section {
+  width: 100vw;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  padding-top: 10em;
+  background: #f8f9fa;
+  position: relative;
+}
+#intro-section.visible {
+  /*opacity: 1;*/
+  transform: translateY(0);
+}
+#intro-section > h2 {
+  font-size: 3.5em;
+  font-weight: bold;
+  width: 18%;
+  text-align: left;
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  /*z-index: 99;*/
+}
+/* 자원순환 수치 영역 */
+#erehub-mark {
+  width: 100vw;
+  padding: 5em 0;
+  background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url("/public/img/noah-buscher-x8ZStukS2PM-unsplash.jpg") fixed center 20%;
+  background-size: cover;
+  color: #fff;
+}
+.mark-info {
+  width: 70%;
+  margin: 0 auto;
+  text-align: left;
+  display: flex;
+  align-items: flex-end;
+  border-bottom: 1px solid #f8f9fa;
+  padding-bottom: 2em;
+}
+.mark-info h1 {
+  padding-right: 1.5em;
+}
+.recycle-score {
+  width: 70%;
+  margin: 0 auto;
+  text-align: left;
+  padding-top: 3em;
+  display: flex;
+  justify-content: space-between;
+}
+.recycle-score h1 {
+  font-size: 6em;
+  font-weight: bold;
+  color: #f8f9fa;
+}
+
+/* foot style */
+
+/*-----------------------------------------------------------------------*/
+
+/* login btn & hover */
+.login-btn {
+  color: #555;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -10px;
+}
+.login-btn button {}
+
+/* 드롭다운 버튼 */
+.dropdown-btn {}
+.user-btn button {
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  background: transparent;
+  margin-top: 7px ;
+}
+
+/* 드롭다운 내용 */
+.dropdown-content {
+  visibility: hidden; /* 기본적으로 숨김 처리 */
+  position: absolute;
+  top: 30px;
+  width: 120px;
+  z-index: 1;
+  border-radius: 5px;
+  background: #fff;
+  opacity: 0;
+  transform: translateY(0);
+  transition: transform 0.3s linear, opacity 0.3s linear, visibility 0.3s linear;
+  overflow: hidden;
+}
+/*.dropdown-btn{*/
+/*  margin-top: -7px;*/
+/*}*/
+/* 드롭다운 버튼과 내용 호버 시 드롭다운 내용 보여주기 */
+.dropdown-btn:hover + .dropdown-content,
+.dropdown-content:hover {
+  visibility: visible; /* 마우스 오버시 표시 */
+  opacity: 1;
+  transform: translateY(30px);
+}
+.dropdown-content .nav-link {
+  width: 100%;
+  color: #212529 !important;
+  text-align: center;
+  transition: 0.3s linear;
+}
+.dropdown-content .nav-link:hover {
+  background: #4CAF50;
+  color: #fff !important;
+}
+
+.Chatbot {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #178844;
+  border-radius: 100px 100px 0 100px;
+  position: fixed;
+  right: 50px;
+  bottom: 10px;
+  z-index: 999;
+  transition: all 0.5s ease;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  /*animation: moveUpDown 3s ease infinite;*/
+}
+.Chatbot:hover {
+  transform: translateY(-10px);
+}
+.chat-open-btn {
+  background: none;
+  border: none;
+}
+
+.chat-open-btn svg {
+  color: #fff;
+  font-size: 55px;
+}
+
+.munji_map{
+  float: left;
+  margin: 30px 40px;
+  width: 60%;
+}
+.calendar_big{
+  float: left;
+  width: 35%;
+  height: 80%;
+}
+
+.pagination{
+  clear: none;
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+.pagination button{
+  width: 50px;
+  height: 30px;
+  background-color: white;
+  color: #3FBFAD;
+  border-radius: 10px;;
+  display: inline-block;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.pagination button:hover{
+  background-color: #f4f4f4;
+  font-weight: bold;
+  cursor: pointer;
+}
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+/* 모바일 화면에서 네비게이션 스타일 */
+@media (max-width: 768px) {
+  * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+  }
+
+  body, h1, h2, h3, p, nav, .Info h1, .top-nav h1, .top-nav h3, .nav-links a, button, .button-class {
+    font-size: 85%; /* 모든 텍스트 요소 글자 크기 조정 */
+  }
+
+  .top-nav h1, .top-nav h3 {
+    font-size: 1.4em; /* h1, h3 태그는 더 작게 조정 */
+  }
+
+  .nav-links a {
+    font-size: 1em; /* 네비게이션 링크의 글자 크기 줄이기 */
+    margin-right: 1em;
+  }
+  .header-Top{
+    margin: 7% auto 0;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .nav-info {
+    margin-top: 10px;
+  }
+  .Info_main{
+    width: 100%;
+  }
+  .Map {
+    width: 100vw; /* 화면의 전체 너비 */
+    height: 50vh; /* 화면 높이의 절반 */
+    float: none; /* 사이드바 아래에 표시 */
+  }
+  .Info {
+    padding: 20px; /* 모바일에서의 패딩 */
+    width: 80%;
+    margin: 10px 10px;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  .sidebar {
+    width: 100% !important; /* 사이드바가 화면 너비를 100% 차지하도록 */
+    height: auto !important; /* 나머지 높이를 차지하도록, 예를 들어 화면 높이의 절반 */
+    position: fixed !important;
+    bottom: 0 !important;
+    margin-top: 40vh !important;
+    margin-left: -20px;
+    overflow-y: auto;
+  }
+
+  .top-nav {
+    flex-direction: column;
+    padding: 10px;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .small_nav{
+    padding-bottom: 0 ;
+    font-size: 10px;
+  }
+  .small_nav .nav_button{
+    margin: 5px;
+  }
+  .header, .sidebar header{
+    height: 50px;
+    padding: 10px 20px;
+  }
+  .sidebar nav {
+    margin: 0;
+    padding: 0;
+  }
+  .munji_map{
+    float: left;
+    margin: 30px 0;
+    width: 100%;
+  }
+  .calendar_big{
+    float: left;
+    width: 100%;
+    height: 100%;
+  }
+  .nav-links {
+    position: absolute;
+    background-color: #3496fe;
+    top: 90px; /* 헤더 바 아래에 위치 */
+    left: 0;
+    width: 100%;
+    height: 30px;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    z-index: 999;
+  }
+  .nav-links.active {
+    transform: translateY(0);
+  }
+  .nav-links a{
+    margin-left: 5px;
+  }
+  .main-contents{
+    height: auto;
+    overflow-y: auto;
+  }
+  .Chatbot {
+    width: 3em;
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #178844;
+    border-radius: 100px 100px 0 100px;
+    position: fixed !important;
+    right: 10px !important;
+    bottom: 10px !important;
+  }
+  .chat-open-btn {
+    background: none;
+    border: none;
+  }
+
+  .chat-open-btn svg {
+    color: #fff;
+    font-size: 2em;
+  }
+  .sendMessage button {
+    width: 2em;
+    height: 3em;
+  }
+  .spend_button{
+    transform: translateX(-15%);
+  }
+  .vioce_button, .speak_button{
+    width: 1em;
+    height: 2em;
+    transform: translateX(-220%) translateY(-130%);
+    left: 0;
+  }
+  .chart-container3 {
+    width: 300px;
+    height: 350px;
+    margin: 20px auto;
+  }
+  .map-btn{
+    font-size: 0.5%;
+  }
+}

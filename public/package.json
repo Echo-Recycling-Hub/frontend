@@ -1,0 +1,21 @@
+{
+  "name": "public",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KangYeonbae/KYB_react.git"
+  },
+  "private": true,
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "oracledb": "^6.4.0"
+  }
+}

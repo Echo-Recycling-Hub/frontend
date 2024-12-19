@@ -1,0 +1,95 @@
+body {
+    background: #f0f0f0;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.info {
+    position: relative;
+    z-index: 1;
+}
+
+.info_nav {
+    height: 60px;
+    background-color: #178844;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.info_nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.info_nav a:hover {
+    text-decoration: underline;
+}
+
+.main-con {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+}
+
+.Info_main {
+    margin: 3% auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 3;
+    position: relative;
+}
+
+.Info_content {
+    width: 65%;
+    height: 700px;
+    background: rgba(0, 0, 0, 0.6); /* 검은색 배경에 약간의 투명도 적용 */
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    color: white;
+    z-index: 4;
+    position: relative;
+}
+
+
+.Info_content h1, .Info_content h2, .Info_content p {
+    margin-bottom: 20px;
+}
+
+.Info_content h1 {
+    color: #FFF8DC;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.Info_content h2 {
+    color: #fff;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.Info_content p {
+    color: #fff;
+    line-height: 3;
+    margin: 0 0 10px;
+    font-size: large;
+}
+
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    pointer-events: none;
+}

@@ -1,0 +1,59 @@
+.P_header_box {
+    height: 60px;
+    background: linear-gradient(45deg, #3496fe, #178844 50%);
+    width: 100%;
+}
+
+.products-con {
+    height: 100%;
+    overflow: auto; /* 기본적으로 스크롤이 필요할 경우 스크롤 생기게 함 */
+    margin: 0;
+    padding: 0;
+}
+
+.product-header, .products-con ul, .products {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.products-con ul {
+    padding: 50px 0 40px;
+}
+
+.products-con ul li {
+    background: #4CAF50;
+    padding: 6px 12px;
+    margin-left: 20px;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.product-header {
+    width: 100vw;
+    height: 250px;
+    border-radius: 0 0 30px 30px;
+    background: url("/public/img/margot-richard-NJJ7paSBO-c-unsplash.jpg") no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+.products {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 80px;
+}
+
+.products button {
+    width: 100px;
+    color: #fff;
+    border: none;
+    padding: 6px 16px;
+    background: #4CAF50;
+}
+
+.products img {
+    /*height: 600px;*/
+    /*background-size: cover;*/
+}

@@ -1,0 +1,103 @@
+/* ../css/post.css */
+
+.Post_header_box {
+    height: 60px;
+    background: linear-gradient(45deg, #3496fe, #178844 50%);
+    width: 100%;
+}
+.MuiGrid-root {
+    width: 100%;
+    flex: none !important;
+}
+.posts, .posts-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* 포스트 콘테이너 */
+.post-container {}
+.post-container h4 {
+    text-align: center;
+    margin: 0;
+    padding: 30px 10px 50px 10px;
+}
+
+/* ---- 포스트 스타일 ---- */
+.posts {
+    width: 80%;
+    padding: 20px 10px;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.posts > div {
+    border-left: 2px solid #4CAF50;
+    margin: 10px 0 20px 0;
+}
+.posts div a { text-decoration: none; }
+.posts-header {
+    width: 100%;
+    height: 350px;
+    background: url("/public/img/dylan-gillis-KdeqA3aTnBY-unsplash.jpg") no-repeat 30%;
+    background-size: cover;
+    color: #fff;
+    border-radius: 0 0 30px 30px;
+}
+.posts-foot {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    padding-bottom: 35px;
+    position: relative;
+}
+.page-btn {
+    position: absolute;
+    bottom: 50%;
+    right: 30px;
+}
+.page-number button {
+    color: #212529;
+    transition: .3s linear;
+}
+.page-number button:hover {
+    color: #4CAF50;
+    background: none;
+}
+
+/* ---- 모달 스타일 ---- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    max-width: 400px;
+    height: 500px;
+    background-color: blue;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    overflow-y: clip;
+}
+.modal-open {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+.modal a { text-decoration: none; }

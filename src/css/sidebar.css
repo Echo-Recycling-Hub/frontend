@@ -1,0 +1,45 @@
+.sidebar2 {
+    position: fixed;
+    top: 90px;
+    width: 400px; /* 기본 사이드바 너비 설정 */
+    height: 85%; /* 화면의 전체 높이 */
+    background: linear-gradient(to top, #f0fff0, #a9e5bb); /* 색상과 방향을 원하는 대로 조정하세요 */
+    padding: 20px;
+    color:#2c3e50; /* 밝은 글자색 */
+    z-index: 998;
+    transition: right 0.3s; /* 애니메이션 효과 */
+    padding: 20px;
+    border-radius: 20px;
+}
+.sidebar2_border{
+    border: #2c3e50 solid 1px;
+    width: 95%;
+    margin: 10px auto;
+    padding: 15px;
+    height: 95%;
+    border-radius: 10px;
+    background: #fff;
+}
+.Rec button{
+    display: inline-block;
+    float: right;
+    margin-top: 10px;
+    border: none;
+    background: none;
+    font-weight: bold;
+}
+.sidebar2 h1 {
+    width: 100%;
+    font-size: 1.5em; /* 큰 제목 */
+    margin-bottom: 0.5em; /* 아래쪽 마진 */
+}
+
+.sidebar2 p {
+    margin-bottom: 1em; /* 단락 간격 */
+}
+
+/* 아이콘 스타일 */
+.sidebar2 svg {
+    vertical-align: middle; /* 아이콘 수직 정렬 */
+    margin-right: 0.5em; /* 아이콘과 텍스트 간격 */
+}

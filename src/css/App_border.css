@@ -1,0 +1,93 @@
+.container_border {
+  top: 100px;
+}
+
+.header_box {
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(45deg, #3496fe, #178844 50%);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.data_border {
+  border: 1px solid #ccc;
+  margin: 10px auto;
+  padding: 10px;
+  width: 550px;
+}
+
+.link_button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+}
+
+.edit_button {
+  background-color: #ffc107;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal_content {
+  background: white;
+  padding: 20px;
+  position: relative;
+  max-width: 40%;
+  /*max-height: 60%;*/
+  overflow: auto;
+}
+
+.modal_close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.carousel_image {
+  max-width: 100%;
+  height: auto;
+}
+
+.form_group {
+  margin-bottom: 15px;
+}
+
+button {
+  margin-right: 10px;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}

@@ -1,0 +1,37 @@
+/* src/App.css */
+.slider-container {
+    padding: 30px;
+    width: 80%;
+    margin: 0 auto;
+}
+.slide {
+    text-align: center;
+    background: #ccc;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.slick-active {
+    height: 400px;
+    margin-right: 20px;
+    background: #fff;
+
+}
+
+
+.map-btn {
+    color: #fff;
+    background: #3498db;
+    display: unset;
+    padding: 12px 32px;
+    /*border-radius: 50px;*/
+    letter-spacing: 3px;
+    border: 1px solid transparent;
+    transition: .2s linear;
+}
+.map-btn:hover {
+    background: #fff;
+    color: #178844;
+    border: 1px solid #178844;
+    cursor: pointer;
+}

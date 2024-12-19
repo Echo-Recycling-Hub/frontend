@@ -1,0 +1,37 @@
+.login-modal-con {
+    width: 45%;
+    height: 100%;
+    background: #f9f9f9;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-modal-con form {
+    width: 80%;
+    margin: 3em;
+}
+.login-modal-con input {
+    display: flex;
+    line-height: 28px;
+    padding: 0.5em 1em;
+    margin: 0.5em;
+    border-bottom: 1px solid #eee;
+}
+.login-modal-con form button {
+    background: #178844;
+    color: #fff;
+    line-height: 28px;
+}
+.login-modal-con p {
+    font-size: 14px;
+    color: #888;
+}
+.login-modal-con span {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bolder;
+    color: #178844;
+}

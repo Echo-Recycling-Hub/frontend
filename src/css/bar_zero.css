@@ -1,0 +1,9 @@
+.info_box{
+    height: 100px;
+    overflow-y: auto;
+}
+
+.recommend{
+    height: 100px;
+    overflow-y: auto;
+}

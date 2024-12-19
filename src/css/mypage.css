@@ -1,0 +1,88 @@
+/* ---- 공통 스타일 ----*/
+.Mypage_header_box{
+    height: 60px;
+    background: linear-gradient(45deg, #3496fe, #178844 50%);
+    width: 100%;
+}
+.Mypage, .mypage-con, .mypage-header, .mypage-head, .mypage-userinfo, .user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Mypage, .mypage-con, .user { flex-direction: column; }
+.mypage-con { width: 100%; }
+
+/* ---- mypage 헤더 ---- */
+.mypage-header {
+    width: 100%;
+    background: #f3f3f3;
+    padding: 0 40px;
+}
+.mypage-head {
+    width: 30%;
+    height: 150px;
+    margin: 20px 10px;
+}
+
+/* ---- mypage 마일리지 ---- */
+.mypage-section { width: 100%; }
+.mileage-form {
+    width: 100%;
+    position: relative;
+    margin: 10px 50px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.mileage-form > div { margin-bottom: 0; }
+.mileage-form input { position: relative; }
+.mileage-form Button {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    transform: translate(0, -50%);
+}
+
+/* ---- userinfo 섹션 ---- */
+.mypage-userinfo {
+    width: 100%;
+    display: flex;
+    padding: 20px 40px;
+}
+.user-profile {
+    width: 30%;
+    margin-left: 50px;
+}
+.user {
+    margin-top: 20px;
+    height: 50vh;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+}
+.user-icons {
+    width: 150px;
+    height: 150px;
+    background: #f8f9fa;
+    border-radius: 100%;
+}
+.user-info {
+    margin: 30px 20px;
+    border-top: 1px solid #ddd;
+}
+
+/* ---- 마일리지 ----*/
+.user-mileage {
+    width: 100%;
+    margin: 10px 50px;
+}
+.use-mileage-con {
+    width: 100%;
+    height: 50vh;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+}
+.use-mileage-txt {
+    margin: 30px 50px;
+}

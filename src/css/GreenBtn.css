@@ -1,0 +1,14 @@
+#green-btn {
+    background: #3496fe;
+    display: unset;
+    padding: 8px 21px;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    transition: .2s linear;
+}
+#green-btn:hover {
+    color: #3496fe;
+    background: #fff;
+    border: 1px solid #3496fe;
+}

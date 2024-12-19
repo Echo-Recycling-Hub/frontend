@@ -1,0 +1,254 @@
+.map_nav{
+    height: 60px;
+    background: linear-gradient(45deg, #3496fe, #178844 50%);
+}
+.location{
+    margin: 20px auto;
+
+}
+.sidebar {
+    width: 400px; /* 기본 사이드바 너비 설정 */
+    height: calc(100vh - 50%); /* 화면의 전체 높이 */
+    background: none;
+    position: absolute;
+    top: 90px;
+    left: 20px;
+    z-index: 98;
+    border-radius: 20px;
+    /*box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);*/
+}
+.sidebar_side {
+    width: 400px; /* 기본 사이드바 너비 설정 */
+    height: calc(100vh - 67%); /* 화면의 전체 높이 */
+    background: #fff;
+    position: absolute;
+    top: 63%;
+    left: 20px;
+    z-index: 98;
+    border-radius: 20px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    overflow-y: auto;
+}
+.Map {
+    width: 100%; /* 사이드바의 너비를 고려한 지도의 너비 */
+    height: calc(100vh - 60px); /* 전체 높이 */
+}
+.imgbox{
+    background-image: url("/public/img/EreHub.png");
+    background-size: cover;
+    width: 155px;
+    height: 200px;
+    margin-top: 10px;
+    margin-left: 10px;
+    z-index: 99;
+}
+.sidebar_side button, a {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    text-decoration-line: none;
+}
+.Mymap-btn {
+    width: 45px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 99;
+    box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.Mymap-btn button {
+    width: 100%;
+    height: 80px;
+    border: none;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    padding: 5px;
+    background: #fff;
+    border-bottom: 1px solid #cccccc;
+    text-align: center;
+    font-size: 12px;
+    transition: color, background 0.5s ease;
+}
+
+/*button:last-child { border: none; }*/
+
+.Mymap-btn svg {
+    color: #555;
+    font-size: 20px;
+    padding-top: 5px;
+}
+/* hover */
+
+/* search result */
+.sidebar {
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+.search-result {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    background: #eee;
+    margin: 16px 3px;
+    overflow-y: auto;
+}
+.result { padding: 10px 0;}
+
+/*input*/
+.search-location {
+    display: flex;
+    flex-direction: column; /* 세로 방향으로 요소 배치 */
+    margin: 0 auto;
+    align-items: center;
+}
+.address-row {
+    display: flex; /* 가로 방향으로 요소 배치 */
+    align-items: center; /* 요소들을 세로로 중앙 정렬 */
+    margin-bottom: 20px; /* 행 사이의 간격 */
+}
+
+.label {
+    margin-right: 10px; /* 레이블과 값 사이의 간격 조정 */
+}
+
+.search-location1 {
+    padding: 5px; /* 안쪽 여백 */
+    border-radius: 5px; /* 모서리를 둥글게 */
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    width: 300px;
+    height: 30px;
+
+}
+
+/*.search-location1 {*/
+/*    display: inline-block; !* 인라인 블록 요소로 설정 *!*/
+/*    padding: 10px;*/
+/*    margin-top: 10px;*/
+/*    border: 1px solid #ccc;*/
+/*    height: 40px;*/
+/*}*/
+.small_nav{
+    width: 150px;
+    display: flex;
+    /*justify-content: space-between;*/
+    /*align-items: center;*/
+    padding-bottom: 16px;
+    flex-direction: column;
+    margin-left: 10px;
+}
+.small_nav .nav_button{
+    display: flex;
+    color: #fff;
+    padding: 10px 23px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #4CAF50;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    margin-top: 30px;
+}
+
+.small_nav .nav_button:focus {
+    background: #3FBFAD;
+    color: #fff;
+}
+.search-location input {
+    width: 100%;
+    border: none;
+    padding: 16px;
+}
+.search-cate {
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-cate button {
+    padding: 0 10px;
+    display: flex;
+    font-size: 30px;
+    margin-left: 15px;
+}
+.search-cate li { padding-right: 40px; }
+.search-cate svg {
+    color: #252525;
+    transition: all .2s ease;
+}
+.search-cate li svg:hover { fill: #3496fe; }
+.search-cate .search-btn {
+    background: #3496fe;
+    padding: 10px 10px;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: 10px;
+    font-size: 15px;
+}
+
+/* marker fixing */
+.senter-marker {
+    position: fixed;
+    bottom: 400px;
+    left: 300px;
+    transform: translate(-50%, 0);
+    background: azure;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    transition: all .3s ease-in-out;
+    z-index: 99;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px; /* 필요에 따라 너비 조정 */
+}
+
+.senter-marker button {
+    width: 45%; /* 각 버튼이 너비의 절반을 차지하여 두 열 형성 */
+    box-sizing: border-box; /* 패딩 및 테두리가 너비에 포함되도록 설정 */
+    padding: 10px;
+    border: none; /* 필요에 따라 조정 */
+    background-color: #f0fff0; /* 필요에 따라 조정 */
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    text-align: center; /* 텍스트 중앙 정렬 */
+    margin: 2px auto; /* 버튼 간 간격 조정 */
+    /*text-shadow: 3px 3px 6px black;*/
+    -webkit-text-stroke: 1px black; /* 글씨 테두리 적용 */
+    color: white;
+}
+
+
+/*.senter-marker {*/
+/*    position: fixed;*/
+/*    left: 500px;*/
+/*    !*left: 51%;*!*/
+/*    !*bottom: 0;*!*/
+/*    transform: translate(-50%, 0);*/
+/*    !*display: flex;*!*/
+/*    !*justify-content: center;*!*/
+/*    !*align-items: center;*!*/
+/*    !*text-align: center;*!*/
+/*    background: #fff;*/
+/*    padding: 10px;*/
+/*    border-radius: 10px 10px 0 0;*/
+/*    transition: all .3s ease-in-out;*/
+/*    z-index: 99;*/
+/*    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);*/
+/*}*/
+/*.senter-marker button {*/
+/*    margin: 10px;*/
+/*    font-size: 1em;*/
+/*    cursor: pointer;*/
+/*    line-height: 24px;*/
+/*    color: #5a5a5a !important;*/
+/*}*/
+/*.senter-marker:hover { padding-bottom: 20px; }*/
+.senter-marker button:hover{
+    color: #178844;
+    background: white;
+    cursor: pointer;
+    -webkit-text-stroke: 1px #178844 ; /* 글씨 테두리 적용 */
+}

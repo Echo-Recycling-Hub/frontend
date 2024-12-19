@@ -1,0 +1,195 @@
+.ChatbotIn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 500px;
+    height: 600px;
+    max-height: 600px;
+    border-radius: 10px 10px 0 0;
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    background: #fff;
+    z-index: 999; /* 추가: 다른 요소 위에 고정 */
+}
+
+/* 마우스 호버 시 위치 변경 방지 */
+.ChatbotIn:hover {
+    right: 2%;
+    bottom: 2%;
+}
+
+.chatbot-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    line-height: 1.2;
+    height: 60px;
+    color: #fff;
+    padding: 10px;
+    background: linear-gradient(240deg, #3496fe, #178844 60%);
+}
+
+.bot-info {
+    font-size: 0.9em;
+    float: left;
+    padding-left: 10px;
+    margin: 0;
+    text-align: left;
+}
+
+.bot-info h5, .bot-info p { margin: 0; }
+
+.chat-icon {
+    text-align: center;
+    line-height: 35px;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 100px;
+    float: left;
+}
+
+.chat-icon svg {
+    font-size: 1.5em;
+    color: #16a085;
+}
+
+.chat-close-btn {
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    border: 0;
+    background: none;
+    color: #fff;
+}
+
+.message-display-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+/* send message area */
+.sendMessage {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex; /* flexbox 레이아웃을 사용하여 내부 요소를 좌우로 배치 */
+    align-items: center; /* 세로 중앙 정렬 */
+    padding: 10px; /* 입력 필드와 버튼 주위의 패딩 */
+    box-shadow: 0px -4px 5px -2px rgba(0,0,0,0.2); /* 상단에 그림자 효과 */
+}
+
+.sendMessage input {
+    flex-grow: 1; /* 나머지 공간을 모두 차지하도록 설정 */
+    margin-right: 10px; /* 버튼과의 간격 */
+    padding: 10px; /* 텍스트 입력 영역 내부의 패딩 */
+    border: 1px solid #ccc; /* 경계 스타일 */
+    border-radius: 20px; /* 경계 둥글기 */
+}
+
+.sendMessage button {
+    min-width: 50px; /* 버튼 최소 너비 */
+    padding: 10px; /* 버튼 내부 패딩 */
+    border: none; /* 경계 없애기 */
+    background-color: #5b9bd5; /* 버튼 배경색 */
+    color: white; /* 버튼 텍스트 색상 */
+    border-radius: 20px; /* 버튼 경계 둥글기 */
+    cursor: pointer; /* 마우스 오버시 커서 변경 */
+}
+
+.sendMessage input:focus {
+    outline: none;
+    background: #fff;
+}
+
+/* chat message */
+.welcome-message {
+    width: 80%;
+    text-align: left;
+    font-size: 0.85em;
+    border: 1px solid #ddd;
+    border-radius: 20px 20px 20px 0;
+    padding: 10px;
+    margin: 80px 10px 10px 10px;
+    line-height: 1.4;
+}
+
+/* send message style */
+.chat-message-user {
+    width: 80%;
+    text-align: right;
+    font-size: 0.85em;
+    border: 1px solid #ddd;
+    border-radius: 20px 20px 0 20px;
+    padding: 10px;
+    margin: 10px 10px 10px auto;
+}
+
+.chat-message-bot {
+    width: 80%;
+    text-align: left;
+    font-size: 0.85em;
+    border: 1px solid #ddd;
+    border-radius: 20px 20px 20px 0;
+    padding: 10px;
+    margin: 10px;
+}
+
+.chat-message-user strong, .chat-message-user div,
+.chat-message-bot strong, .chat-message-bot div {
+    display: inline-block;
+    line-height: 1.4; /* 기본적인 줄 간격으로 조정합니다. */
+    /*margin-right: 5px; !* 필요에 따라 조정할 수 있는 여백입니다. *!*/
+}
+
+.chat-message-user, .chat-message-bot {
+    /* 기존 스타일 유지하면서 추가 */
+    line-height: 1.2; /* 기본값은 보통 1.4 ~ 1.6, 여기서는 줄 간격을 줄입니다 */
+}
+
+/* Chatbot modal styles */
+.chatbot-modal-overlay {
+    position: fixed;
+    top: 20%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.chatbot-modal {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.chatbot-modal-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px){
+    .ChatbotIn {
+        width: 19em;
+        height: 35em;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+    }
+}

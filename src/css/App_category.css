@@ -1,0 +1,41 @@
+.category_container {
+    position: relative;
+    top: 100px;
+    padding: 20px;
+}
+
+.category_header {
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(45deg, #3496fe, #178844 50%);
+}
+
+.category_data {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.category_data:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.category_data img {
+    width: 100%; /* 이미지가 카드 내부에 맞게 조정되도록 변경 */
+    height: auto;
+    border-radius: 10px;
+}
+
+.category_data h5 {
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.category_data p {
+    color: #666;
+}

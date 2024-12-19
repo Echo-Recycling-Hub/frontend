@@ -1,0 +1,362 @@
+/* base style */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-style: normal;
+}
+
+.App {
+  display: flex;
+  flex-direction: row; /* 넓은 화면에서는 사이드바와 지도가 나란히 배치됨 */
+  height: 90vh;
+}
+
+.Info{
+  margin-top: 140px;
+  padding: 20px;
+}
+.header-Top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 999;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  background: #fff; /* 예시 배경색 */
+}
+
+.gradient-text {
+  background-image: linear-gradient(45deg, #3496fe, #178844 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin : 0 auto;
+  }
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(45deg, #3496fe, #178844 50%);
+  color: white;
+  padding: 10px 20px;
+  position: fixed;
+  top: 70px; /* 헤더 아래에 위치하도록 조정 */
+  width: 100%;
+  height: 70px;
+  z-index: 998; /* 헤더 위에 오도록 z-index 값 조정 */
+  box-sizing: border-box; /* 패딩을 포함한 너비가 100%가 되도록 설정 */
+}
+
+.top-nav a, .sidebar a, .nav-info a {
+  color: white;
+  text-decoration: none;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px; /* 링크 사이의 간격 */
+}
+
+.nav-info span {
+  margin-right: 20px; /* 정보 사이의 간격 */
+}
+
+.sidebar {
+  flex-basis: 400px; /* 기본 사이드바 너비 설정 */
+  height: calc(100vh - 140px); /* 화면의 전체 높이 */
+  background: #16a085;
+  margin-top: 140px;
+  /* 기타 스타일 */
+}
+
+.main-con {
+  flex-grow: 1;
+  margin-top: 140px;/* 남은 공간을 모두 차지 */
+  /* 기타 스타일 */
+}
+
+
+.Map {
+  width: calc(100vw - 400px); /* 사이드바의 너비를 고려한 지도의 너비 */
+  height: calc(100vh - 140px); /* 전체 높이 */
+  float: left; /* 사이드바 옆에 표시 */
+}
+
+.Navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+
+}
+.sidebar header {
+  padding: 20px;
+  background: #178844;
+}
+.sidebar nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #16a085;
+}
+.sidebar button, a {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+
+}
+.sidebar svg {
+  display: flex;
+  font-size: 1.8em;
+}
+
+.text_box{
+  margin: 0 50px;
+}
+.big_content1{
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.nav_button{
+  width: 120px;
+  background: white;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.small_nav{
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.small_nav .nav_button{
+  background: white;
+  margin: 20px 5px;
+  padding: 10px;
+  border-radius: 10px;
+  color : #16a085;
+  cursor: pointer;
+
+}
+
+.small_nav .nav_button:hover{
+  background: whitesmoke;
+  margin: 20px 5px;
+  padding: 10px;
+  border-radius: 10px;
+  color : #16a085;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.sub {
+  width: 250px;
+  position: fixed;
+  right: 50px;
+  top: 120px;
+  z-index: 99;
+  background: #fff;
+  padding: 20px;
+}
+
+.login-btn{
+  border: 2px solid #A2E1D4;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #A2E1D4;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+}
+.myPage, .nav-link{
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #A2E1D4;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+}
+/* 드롭다운 버튼 */
+.dropdown-btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  background-color: #A2E1D4;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+  margin-right: 10px;
+}
+
+/* 드롭다운 내용 */
+.dropdown-content {
+  display: none; /* 기본적으로 숨김 처리 */
+  position: absolute;
+  right: 0; /* 오른쪽 정렬 */
+  width: 100px;
+  margin: 20px 20px 20px 0;
+  z-index: 1;
+}
+
+/* 드롭다운 버튼 호버 시 드롭다운 내용 보여주기 */
+.login-btn:hover .dropdown-content {
+  display: block; /* 마우스 오버시 표시 */
+}
+
+.Chatbot {
+  width: 80px;
+  height: 80px;
+  line-height: 76px;
+  text-align: center;
+  background: #178844;
+  border-radius: 100px 100px 0 100px;
+  position: absolute;
+  right: 3%;
+  bottom: 2%;
+  z-index: 999;
+}
+
+.chat-open-btn {
+  background: none;
+  border: none;
+}
+
+.chat-open-btn svg {
+  color: #fff;
+  font-size: 55px;
+}
+
+.senter-marker {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.senter-marker button {
+  width: 100px;
+  height: 100px;
+  border: none;
+  border-radius: 50px;
+  background: #3FBFAD;
+  margin: 10px;
+  font-size: 1em;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.senter-marker button:hover{
+  background-color: #A2E1D4; /* 호버 상태의 배경색 변경 */
+  cursor: pointer;
+}
+
+.Info {
+  background: #f4f4f4; /* 연한 회색 배경 */
+  padding: 40px; /* 콘텐츠 주변의 패딩 */
+  border-radius: 8px; /* 둥근 모서리 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 상자 그림자 */
+  max-width: 800px; /* 최대 너비 */
+  margin: 40px auto; /* 가운데 정렬을 위한 자동 마진 */
+  font-family: 'Open Sans', sans-serif; /* 폰트 스타일 */
+}
+
+.Info h1, .Info h2, .Info p {
+  margin-bottom: 20px; /* 요소간 간격 */
+}
+
+.Info h1 {
+  color: #333; /* 제목 색상 */
+  font-size: 2.5em; /* 제목 크기 */
+}
+
+.Info p {
+  color: #666; /* 본문 텍스트 색상 */
+  line-height: 1.6; /* 줄간격 */
+}
+
+.pagination{
+  clear: none;
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+.pagination button{
+  width: 50px;
+  height: 30px;
+  background-color: white;
+  color: #3FBFAD;
+  border-radius: 10px;;
+  display: inline-block;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.pagination button:hover{
+  background-color: #f4f4f4;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* 모바일 화면에서 네비게이션 스타일 */
+@media (max-width: 768px) {
+  .App {
+    flex-direction: column-reverse; /* 사이드바를 지도 아래로 */
+  }
+
+  .main-con {
+    width: 100%; /* 지도가 화면 너비를 100% 차지하도록 */
+    height: 50vh; /* 원하는 높이로 설정, 예를 들어 화면 높이의 절반 */
+    /* 다른 스타일 */
+  }
+  .sidebar {
+    margin-top: 0;
+    width: 100%; /* 사이드바가 화면 너비를 100% 차지하도록 */
+    height: 50vh; /* 나머지 높이를 차지하도록, 예를 들어 화면 높이의 절반 */
+    /* 다른 스타일 */
+  }
+  .top-nav {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .nav-links {
+    margin-top: 10px;
+  }
+
+  .nav-info {
+    margin-top: 10px;
+  }
+  .Map {
+    width: 100vw; /* 화면의 전체 너비 */
+    height: 50vh; /* 화면 높이의 절반 */
+    float: none; /* 사이드바 아래에 표시 */
+  }
+  .Info {
+    padding: 20px; /* 모바일에서의 패딩 */
+  }
+}

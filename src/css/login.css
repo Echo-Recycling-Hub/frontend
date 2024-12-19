@@ -1,0 +1,60 @@
+/* Login.css */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* 화면 중앙에 고정 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%; /* 로그인 폼의 너비, 반응형으로 % 단위 사용 */
+    max-width: 350px; /* 최대 너비 설정 */
+    padding: 2rem;
+    background: #FFF8DC; /* 밝은 베이지 색상으로 변경 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.login-form label {
+    font-size: 0.9rem;
+    color: #5a5a5a;
+    margin-bottom: 0.5rem;
+}
+
+.login-form input {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* padding 포함하여 width 계산 */
+}
+
+.login-form button {
+    padding: 0.7rem;
+    background-color: #2E8B57; /* 버튼 색상을 헤더 색상과 동일하게 조정 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #276747; /* 호버 시 버튼 색상 변경 */
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .login-container {
+        width: 80%; /* 모바일 화면에서는 너비를 더 넓게 설정 */
+        top: 35%;
+    }
+}

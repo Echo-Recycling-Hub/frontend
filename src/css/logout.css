@@ -1,0 +1,40 @@
+/* loout.css */
+.logout-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* 화면 중앙에 고정 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px; /* 로그인 폼의 너비 */
+    padding: 2rem;
+    background: wheat; /* 배경 색상 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form label {
+    font-size: 1rem;
+    color: #5a5a5a; /* 라벨 색상 */
+    margin-bottom: 0.5rem;
+}
+
+.login-form button {
+    padding: 0.7rem;
+    background-color: #4CAF50; /* 로그인 버튼 배경 색상, 페이지의 주 색상과 동일 */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #367c39; /* 호버 시 버튼 색상 */
+}
