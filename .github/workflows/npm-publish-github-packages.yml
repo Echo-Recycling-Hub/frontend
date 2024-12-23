@@ -1,0 +1,57 @@
+# React를 S3에 배포하기 위한 GitHub Action 워크플로우
+name: Deploy React App to S3
+
+# main 브랜치에 Push가 발생할 때 워크 플로우 실행
+on:
+  push:
+    branches:
+      - main
+
+# Ubuntu 최신버전에서 작업 실행
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+#레포지토리 코드 체크아웃
+   steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+#  Nodejs 환경설정정
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+#  프로젝트 의존성 설치
+    - name: Install dependencies
+      run: npm install
+#  React App 빌드
+    - name : Build React App
+      run: npm run build
+      env:
+        CI: false  #CI 환경에서 경고를 에러로 처리하지 않도록 설정
+
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v2
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ secrets.AWS_REGION }}
+
+# 빌드폴더를 S3와 동기화, 기존파일 삭제, 공개 읽기 권한 설정
+# S3 정적 웹사이트 호스팅 설정
+# 캐시무효화화
+    - name: Upload to S3
+      run: |
+        aws s3 sync ./build s3://${{ secrets.S3_BUCKET_NAME }} --delete --acl public-read
+        aws s3 website s3://${{ secrets.S3_BUCKET_NAME }} --index-document index.html --error-document error.html
+
+    # - name: Invlidate CloudFront
+    #   uses: chetan/invalidate-cloudfront-action@master
+    #   env:
+    #     PATHS: '/*'  # 모든경로 캐시 무효화
+    #     aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+    #     aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+    #     aws-region: ${{ secrets.AWS_REGION }}
+    #     DISTRIBUTION: ${{ secrets.DEV_AWS_DISTRIBUTION_ID }} #CloudFront 배포
+           
